@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+  }
+
+.user-direction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.user-direction button {
+    width: 20vw;
+    height: 10vh;
+    border: 0.2px outset rgba(255, 255, 255, 0.599);
+    outline: 0;
+    border-radius: 16px;
+    background-color: #EBECF0;
+    text-shadow: 1px 1px 0 #FFF;
+    color: #61677C;
+    box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 44px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #FFF;
+
+    &:hover {
+        box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+    }
+
+    &:active {
+        box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+    }
+
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .user-direction {
+        flex-direction: column; /* Stack buttons horizontally on smaller screens */
+    }
+
+    .user-direction button {
+        width: 80%; /* Adjust button width for smaller screens */
+        height: 11vh;
+    }
+}

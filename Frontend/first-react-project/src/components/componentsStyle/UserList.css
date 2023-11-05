@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+.user-list {
+    width: 70vw;
+    height: 80vh;
+    padding: 1%;
+    padding-top: 1.8%;
+    border: 0;
+    outline: 0;
+    border-radius: 16px;
+    background-color: #EBECF0;
+    box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+    transition: all 0.2s ease-in-out;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    /* Single column on smaller screens */
+    grid-template-rows: auto;
+    /* Adjust row sizing to content */
+    grid-row-gap: 6%;
+    overflow: auto;
+
+    &:hover {
+        box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+    }
+}
+
+/* Style the scrollbar track */
+.user-list::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Style the scrollbar thumb */
+.user-list::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Color of the thumb */
+    border-radius: 6px;
+    /* Round the thumb */
+}
+
+/* Style the scrollbar track on hover */
+.user-list:hover::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Style the scrollbar thumb on hover */
+.user-list:hover::-webkit-scrollbar-thumb {
+    background: #555;
+    /* Color of the thumb on hover */
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (min-width: 768px) {
+    .user-list {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns on larger screens */
+    }
+}
