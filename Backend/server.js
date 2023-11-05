@@ -1,4 +1,3 @@
-require = require('esm')(module);
 require('dotenv').config();
 
 const express = require('express');
