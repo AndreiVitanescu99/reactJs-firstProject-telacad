@@ -3,10 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const multer = require('multer');
-const dbOperations = require('./dbFiles/dbUser/dbOperations');
 const userRoutes = require('./routes/userRoutes');
-
 const API_PORT = process.env.PORT || 5000;
 
 app.use(express.json());
@@ -21,7 +18,6 @@ app.use((err, req, res, next) => {
     res.status(500).json({ success: false, message: 'Internal server error' });
 });
 
-
 app.listen(API_PORT, () => console.log(`listening on port ${API_PORT}`));
-// app.listen();
+
 
