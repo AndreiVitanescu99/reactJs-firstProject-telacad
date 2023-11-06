@@ -154,7 +154,7 @@ function UserAddForm() {
   const fetchDataPicture = async (email) => {
     userProfile.set('email_user', email)
     try {
-      const response = await fetch('http://localhost:5000/postUserPicture', {
+      const response = await fetch('http://localhost:5000/users/postUserPicture', {
         method: 'POST',
         body: userProfile,
       });
